@@ -1,0 +1,89 @@
+@import 'includes/constants';
+@import 'includes/standard';
+
+.container {
+    display: flex;
+    margin: 10em 5em 7em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 1;
+    & .box {
+        flex-basis: 31%;
+        margin-bottom: 2em;
+        display: flex;
+        background-size: cover;
+        justify-content: center;
+        align-items: flex-end;
+        border: solid $background 4px;
+        border-radius: 3%;
+        overflow: hidden;
+        transition: border 1200ms ease;
+        &:before {
+            content:'';
+            padding-top:100%;
+        }
+        &:hover {
+            border: solid black 4px;
+            & .overlay{
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.overlay {
+    background-color: $color4;
+    text-align: center;
+    line-height: 2;
+    width: 100%;
+    color: $background;
+    opacity: 0.7;
+    transition: opacity 1000ms ease;
+}
+
+@media screen and (max-width: $screen-medium) {
+    .container {
+        margin: 10em 1.5em;
+        & .box {
+            flex-basis: 48%;
+            margin-bottom: 1em;
+        }
+    }
+    body { font-size: smaller;}
+}
+
+@media screen and (max-width: $screen-small) {
+    .container {
+        margin: 9em 1em;
+        & .box {
+            flex-basis: 100%;
+        }
+    }
+    body { font-size: small;}
+}
+
+
+// Content relevant :
+
+#recipe1 {background-image: url(/images/255A0534.jpg);
+    display: flex;} //could be toggled to none, to filter out boxes ;-)
+#recipe2 {background-image: url(/images/ben-lei-flFd8L7_B3g-unsplash.jpg);
+    display: flex;} 
+#recipe3 {background-image: url(/images/burger-gadf6b4f0a_1280.jpg);
+    display: flex;}
+#recipe4 {background-image: url(/images/jerome-jome-Ga3ziG9jCno-unsplash.jpg);
+    display: flex;}
+#recipe5 {background-image: url(/images/jimmy-chang-BkbqYsGOh-o-unsplash.jpg);
+    display: flex;}
+#recipe6 {background-image: url(/images/karthik-garikapati-oBbTc1VoT-0-unsplash.jpg);
+    display: flex;}
+#recipe7 {background-image: url(/images/mark-konig-MyfbM2QYF4o-unsplash.jpg);
+    display: flex;}
+#recipe8 {background-image: url(/images/natalia-y-ljVSRqHCP2U-unsplash.jpg);
+    display: flex;}
+#recipe9 {background-image: url(/images/torte-gab8271b3e_1280.jpg);
+    display: flex;}
+
+#kasnocken {display: flex} //could also be toggled to none - so we can activate always only one receipt to display on this page - maybe easier later with JS ;-)
+#penneArabiate {display: none;}

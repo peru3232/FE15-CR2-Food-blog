@@ -1,0 +1,136 @@
+@import 'constants';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $standardfont;
+    font-size: medium;
+    background: $background;
+}
+
+header, nav {
+    width: 100%;
+    height: 4em;
+    background: $color1;
+    position: fixed;
+    z-index: 2;
+    align-content: center;
+    & > h1 {
+        float: left;
+        font-family: $headerfont;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    & .button {
+        margin-top: 17px;
+        & a {
+            float: right;
+            text-align: center;    
+            border: solid 2px $color3;
+            border-radius: 6px;
+            height: 1.3em;
+            width: 155px;
+            color: $color2;
+            text-decoration: none;
+        }
+    }
+    & .search {
+        margin-top: 17px;
+        float: right;
+        text-align: center;
+        width: 50px;
+    }
+}
+
+nav {
+    top: 4em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#mainNav {
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    border-top: solid $color2 1px;
+    border-bottom: solid $color2 1px; 
+    & a {
+        color: $color2;
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        width: 100px;
+        height: 40px;
+        margin: auto;
+        background: $color3o;
+        transition: font-size 300ms, background 500ms;
+        &:hover {
+            background: $color3;
+            font-size: medium;
+        }
+    }
+}
+
+#reciptsNav {  //for possible changes later...
+    @extend #mainNav;
+}
+
+
+footer {
+    background-color: $color2;
+    z-index: 2;
+    color: $color1;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 7em;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    & .navbar {
+        width: 100%;
+        height: 3em;
+        float: left;
+        display: flex;
+        justify-content: center;
+        & ul  {
+            list-style-type: none;
+            display: flex;
+            height: 100%;
+            width: 66%;
+            & li {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                margin: auto;
+        
+            }
+        }        
+    }
+    & a {
+        color: $color1;
+        text-decoration: none;
+        &:hover, :link, :visited {
+            color: $color3;
+        }
+    }
+    & > ul{
+        position: absolute;
+        list-style-type: none;
+        line-height: 1.5;
+        top: 3em;
+    }
+}
+li span {
+    font-size: large;
+}
