@@ -8,7 +8,9 @@ $headerfont: 'Great Vibes';
 $screen-min: 350px; //min fluid size
 $screen-small: 480px;
 $screen-medium: 1024px;
-$screen-max: 1350px; //max container fluid size, else the boxes can be too big
+$screen-uwide: 2400px; //extra for ultra wide displays and landscape
+$screen-max: 1400px; //max container fluid size, else the boxes can be too big
+$screen-maxuw: 2600px; //max container fluid size, else the boxes can be too big
 
 $color1:  white;
 $color2:  black;

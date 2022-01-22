@@ -5,23 +5,31 @@
 
 body {
   font-family: "Times New Roman", Times, serif;
-  font-size: medium;
+  font-size: large;
   background: floralwhite;
   min-width: 350px;
 }
 
-nav, footer, header {
-  width: 100%;
-  min-width: 350px;
+nav {
+  width: 150px;
   z-index: 2;
   position: fixed;
-  height: 4em;
+  height: 100%;
   background: white;
   align-content: center;
   top: 4em;
 }
 
 header {
+  width: 100%;
+  min-width: 350px;
+  z-index: 3;
+  position: fixed;
+  height: 4em;
+  background: white;
+  align-content: center;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
   overflow: hidden;
   top: 0em;
 }
@@ -55,9 +63,9 @@ header .search {
 #mainNav, #reciptsNav {
   list-style-type: none;
   height: 100%;
-  display: flex;
-  border-top: solid black 1px;
-  border-bottom: solid black 1px;
+  display: block;
+  border-top: 0;
+  border-right: solid black 1px;
   overflow: hidden;
 }
 #mainNav a, #reciptsNav a {
@@ -69,32 +77,36 @@ header .search {
   justify-content: center;
   border-radius: 5px;
   width: 100px;
-  height: 60%;
-  margin: auto;
+  height: 40px;
+  margin: 2em auto;
   background: rgba(114, 196, 243, 0);
   transition: font-size 300ms, background 500ms;
 }
 #mainNav a:hover, #reciptsNav a:hover {
   background: rgba(114, 196, 243, 0.6);
-  font-size: medium;
+  font-size: large;
 }
 
 #reciptsNav span {
   font-size: large;
 }
 
-aside {
-  position: relative;
-  top: 8em;
-}
-
 main {
   display: flex;
   justify-content: center;
+  margin-left: 150px;
 }
 
 footer {
-  top: auto;
+  width: 100%;
+  min-width: 350px;
+  z-index: 3;
+  position: fixed;
+  height: 4em;
+  background: white;
+  align-content: center;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
   height: 7em;
   background-color: black;
   bottom: 0;
@@ -136,16 +148,16 @@ footer > ul {
 
 .container {
   display: flex;
-  margin: 10em 5em 7em;
+  margin: 5em 1em 7em;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1350px;
+  max-width: 2600px;
   z-index: 1;
 }
 .container .box {
-  flex-basis: 30%;
-  margin: 1em auto;
+  flex-basis: 18%;
+  margin: 0.5em auto;
   display: flex;
   background-size: cover;
   justify-content: center;
@@ -176,6 +188,44 @@ footer > ul {
   transition: opacity 1000ms ease;
 }
 
+@media screen and (max-width: 2400px) {
+  .container {
+    margin: 10em 5em 7em;
+    max-width: 1400px;
+  }
+  .container .box {
+    flex-basis: 30%;
+    margin: 1em auto;
+  }
+
+  body {
+    font-size: medium;
+  }
+
+  nav {
+    width: 100%;
+    min-width: 350px;
+    height: 4em;
+  }
+
+  #mainNav, #reciptsNav {
+    display: flex;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+    border-right: 0;
+  }
+  #mainNav a, #reciptsNav a {
+    height: 60%;
+    margin: auto;
+  }
+  #mainNav:hover, #reciptsNav:hover {
+    font-size: medium;
+  }
+
+  main {
+    margin-left: 0;
+  }
+}
 @media screen and (max-width: 1024px) {
   .container {
     margin: 9.5em 1.5em;
