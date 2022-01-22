@@ -25,7 +25,8 @@ nav {
 
 header {
     @extend nav;
-    top: 0;
+    overflow: hidden;
+    top: 0em;
     & h1 {
         float: left;
         font-family: $headerfont;
@@ -60,6 +61,7 @@ header {
     display: flex;
     border-top: solid $color2 1px;
     border-bottom: solid $color2 1px; 
+    overflow: hidden;
     & a {
         color: $color2;
         text-decoration: none;
@@ -69,7 +71,7 @@ header {
         justify-content: center;
         border-radius: 5px;
         width: 100px;
-        height: 40px;
+        height: 60%;
         margin: auto;
         background: $color3o;
         transition: font-size 300ms, background 500ms;
@@ -82,6 +84,11 @@ header {
 #reciptsNav {
     @extend #mainNav;
     span {font-size: large;}      
+}
+
+aside {
+    position: relative;
+    top: 8em;
 }
 
 main {

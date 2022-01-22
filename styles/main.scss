@@ -7,6 +7,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
+    max-width: $screen-max;
     z-index: 1;
     & .box {
         flex-basis: 30%;
@@ -63,6 +64,19 @@
     body { font-size: small;}
 }
 
+#about {
+    border: solid 2px $color3;
+    padding: 3em;
+    border-radius: 1em;
+    min-height: 30em;
+    width: 35em;
+}
+#faq {
+    @extend #about;
+    & ol {
+        padding-left: 1.5em;
+    }
+}
 
 // Content relevant :
 
