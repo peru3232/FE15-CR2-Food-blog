@@ -28,6 +28,7 @@
             & .overlay{
                 opacity: 0;
             }
+
         }
     }
 }
@@ -84,5 +85,5 @@
 #recipe9 {background-image: url(/images/torte-gab8271b3e_1280.jpg);
     display: flex;}
 
-#kasnocken {display: flex} //could also be toggled to none - so we can activate always only one receipt to display on this page - maybe easier later with JS ;-)
+#kasnocken {display: flex} //toggling to select recipes - so we can activate always only one receipt to display on page - maybe easier later with JS ;-)
 #penneArabiate {display: none;}
