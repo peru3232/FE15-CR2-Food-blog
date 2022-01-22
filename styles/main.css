@@ -7,26 +7,34 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: medium;
   background: floralwhite;
+  min-width: 350px;
 }
 
-header, nav {
+nav, footer, header {
   width: 100%;
+  min-width: 350px;
+  z-index: 2;
+  position: fixed;
   height: 4em;
   background: white;
-  position: fixed;
-  z-index: 2;
   align-content: center;
+  top: 4em;
 }
-header > h1, nav > h1 {
+
+header {
+  top: 0;
+}
+header h1 {
   float: left;
   font-family: "Great Vibes";
   margin-left: 30px;
   margin-top: 10px;
+  color: black;
 }
-header .button, nav .button {
+header .button {
   margin-top: 17px;
 }
-header .button a, nav .button a {
+header .button a {
   float: right;
   text-align: center;
   border: solid 2px rgba(114, 196, 243, 0.6);
@@ -36,20 +44,11 @@ header .button a, nav .button a {
   color: black;
   text-decoration: none;
 }
-header .search, nav .search {
+header .search {
   margin-top: 17px;
   float: right;
   text-align: center;
   width: 50px;
-}
-
-nav {
-  top: 4em;
-}
-
-main {
-  display: flex;
-  justify-content: center;
 }
 
 #mainNav, #reciptsNav {
@@ -78,37 +77,40 @@ main {
   font-size: medium;
 }
 
+#reciptsNav span {
+  font-size: large;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
 footer {
-  background-color: black;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  letter-spacing: 1px;
-  width: 100%;
+  top: auto;
   height: 7em;
-  position: fixed;
+  background-color: black;
   bottom: 0;
+  letter-spacing: 1px;
+  color: white;
   display: flex;
   justify-content: center;
 }
 footer .navbar {
   width: 100%;
   height: 3em;
-  float: left;
   display: flex;
   justify-content: center;
 }
 footer .navbar ul {
-  list-style-type: none;
   display: flex;
   height: 100%;
   width: 66%;
 }
 footer .navbar ul li {
   list-style: none;
-  display: flex;
-  justify-content: center;
   margin: auto;
+  text-align: center;
 }
 footer a {
   color: white;
@@ -122,10 +124,7 @@ footer > ul {
   list-style-type: none;
   line-height: 1.5;
   top: 3em;
-}
-
-li span {
-  font-size: large;
+  text-align: center;
 }
 
 .container {
@@ -137,8 +136,8 @@ li span {
   z-index: 1;
 }
 .container .box {
-  flex-basis: 31%;
-  margin-bottom: 2em;
+  flex-basis: 30%;
+  margin: 1em auto;
   display: flex;
   background-size: cover;
   justify-content: center;
@@ -165,17 +164,16 @@ li span {
   line-height: 2;
   width: 100%;
   color: floralwhite;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 1000ms ease;
 }
 
 @media screen and (max-width: 1024px) {
   .container {
-    margin: 10em 1.5em;
+    margin: 9.5em 1.5em;
   }
   .container .box {
-    flex-basis: 48%;
-    margin-bottom: 1em;
+    flex-basis: 45%;
   }
 
   body {
@@ -187,7 +185,7 @@ li span {
     margin: 9em 1em;
   }
   .container .box {
-    flex-basis: 100%;
+    flex-basis: 92%;
   }
 
   body {

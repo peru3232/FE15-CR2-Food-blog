@@ -9,8 +9,8 @@
     width: 100%;
     z-index: 1;
     & .box {
-        flex-basis: 31%;
-        margin-bottom: 2em;
+        flex-basis: 30%;
+        margin: 1em auto;
         display: flex;
         background-size: cover;
         justify-content: center;
@@ -24,7 +24,7 @@
             padding-top:100%;
         }
         &:hover {
-            border: solid black 4px;
+            border: solid $color2 4px;
             & .overlay{
                 opacity: 0;
             }
@@ -38,16 +38,15 @@
     line-height: 2;
     width: 100%;
     color: $background;
-    opacity: 0.7;
+    opacity: 0.8;
     transition: opacity 1000ms ease;
 }
 
 @media screen and (max-width: $screen-medium) {
     .container {
-        margin: 10em 1.5em;
+        margin: 9.5em 1.5em;
         & .box {
-            flex-basis: 48%;
-            margin-bottom: 1em;
+            flex-basis: 45%;
         }
     }
     body { font-size: smaller;}
@@ -57,7 +56,7 @@
     .container {
         margin: 9em 1em;
         & .box {
-            flex-basis: 100%;
+            flex-basis: 92%;
         }
     }
     body { font-size: small;}
