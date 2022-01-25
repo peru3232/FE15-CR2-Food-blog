@@ -24,12 +24,11 @@
             content:'';
             padding-top:100%;
         }
-        &:hover {
+        &:hover, :focus {
             border: solid $color2 4px;
             & .overlay{
                 opacity: 0;
             }
-
         }
     }
 }

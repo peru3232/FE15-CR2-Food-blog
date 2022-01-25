@@ -61,12 +61,16 @@ header .search {
   overflow: hidden;
 }
 #mainNav a, #reciptsNav a {
-  color: black;
   text-decoration: none;
-  list-style: none;
+  color: black;
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
+}
+#mainNav li, #reciptsNav li {
+  list-style: none;
   border-radius: 5px;
   width: 100px;
   height: 60%;
@@ -74,7 +78,7 @@ header .search {
   background: rgba(114, 196, 243, 0);
   transition: font-size 300ms, background 500ms;
 }
-#mainNav a:hover, #reciptsNav a:hover {
+#mainNav li:hover, #reciptsNav li:hover, #mainNav li :focus, #reciptsNav li :focus {
   background: rgba(114, 196, 243, 0.6);
   font-size: medium;
 }
@@ -123,7 +127,7 @@ footer a {
   color: white;
   text-decoration: none;
 }
-footer a:hover, footer a :link, footer a :visited {
+footer a:hover, footer a :link, footer a :visited, footer a :focus {
   color: rgba(114, 196, 243, 0.6);
 }
 footer > ul {
@@ -159,10 +163,10 @@ footer > ul {
   content: "";
   padding-top: 100%;
 }
-.container .box:hover {
+.container .box:hover, .container .box :focus {
   border: solid black 4px;
 }
-.container .box:hover .overlay {
+.container .box:hover .overlay, .container .box :focus .overlay {
   opacity: 0;
 }
 

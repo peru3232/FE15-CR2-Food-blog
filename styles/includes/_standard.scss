@@ -63,19 +63,23 @@ header {
     border-bottom: solid $color2 1px; 
     overflow: hidden;
     & a {
-        color: $color2;
         text-decoration: none;
-        list-style: none;
+        color: $color2;
         display: flex;
+        height: 100%;
         align-items: center;
         justify-content: center;
+        border-radius: 5px;
+    }
+    & li {
+        list-style: none;
         border-radius: 5px;
         width: 100px;
         height: 60%;
         margin: auto;
         background: $color3o;
         transition: font-size 300ms, background 500ms;
-        &:hover {
+        &:hover, :focus {
             background: $color3;
             font-size: medium;
         }
@@ -125,7 +129,7 @@ footer {
     & a {
         color: $color1;
         text-decoration: none;
-        &:hover, :link, :visited {
+        &:hover, :link, :visited, :focus {
             color: $color3;
         }
     }
