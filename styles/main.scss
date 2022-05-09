@@ -3,15 +3,15 @@
 
 .container {
     display: flex;
-    margin: 5em 1em 7em;
+    margin: 10em 5em 7em;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    max-width: $screen-maxuw;
+    max-width: $screen-max;
     z-index: 1;
     & .box {
-        flex-basis: 18%;
-        margin: 0.5em auto;
+        flex-basis: 30%;
+        margin: 1em auto;
         display: flex;
         background-size: cover;
         justify-content: center;
@@ -42,37 +42,6 @@
     color: $background;
     opacity: 0.8;
     transition: opacity 1000ms ease;
-}
-
-@media screen and (max-width: $screen-uwide) {
-    .container {
-        margin: 10em 5em 7em;
-        max-width: $screen-max;
-        & .box {
-            flex-basis: 30%;
-            margin: 1em auto;
-        }
-    }
-    body { font-size: medium;}
-    nav { 
-        width: 100%;
-        min-width: $screen-min;
-        height: 4em;
-    }
-    #mainNav {
-        display: flex;
-        border-top: solid $color2 1px;
-        border-bottom: solid $color2 1px;
-        border-right: 0;
-        & a {
-            height: 60%;
-            margin: auto;    
-        }
-        &:hover {
-            font-size: medium;
-        }    }
-    main { margin-left: 0;}
-
 }
 
 @media screen and (max-width: $screen-medium) {
@@ -111,7 +80,7 @@
 
 // Content relevant :
 
-#recipe1 {background-image: url(../images/255A0534.jpg);
+#recipe1 {background-image: url(/images/255A0534.jpg);
     display: flex;} //could be toggled to none, to filter out boxes ;-)
 #recipe2 {background-image: url(../images/ben-lei-flFd8L7_B3g-unsplash.jpg);
     display: flex;} 
